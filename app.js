@@ -23,12 +23,7 @@ ngApp.config(function (IORouterProvider) {
   .when('/user', {
     controller: UserCtrl,
     templateUrl: '/templates/user.html',
-    policies: ['userIsAuth'],
-    actions: [{
-      POST: {
-        policies: ['hasWriteRights']
-      }
-    }]
+    policies: ['userIsAuth', {POST: ['hasWriteRights']}],
   })
   .otherwise({
     redirectTo: '/'
