@@ -30,6 +30,6 @@ ngApp.config(function (IORouterProvider) {
   });
 });
 
-angular.bootstrap(document.body, ['io']);
+angular.bootstrap(document.documentElement, ['io']);
 
 module.exports = app;
